@@ -1,5 +1,7 @@
 # GitHub Skyline Viewer
 
+[Demo](https://github-skyline.netlify.app/)
+
 ## Build Setup
 
 ```bash
