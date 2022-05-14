@@ -1,5 +1,5 @@
 <template>
-  <div class="model-render">
+  <div class="model-render w-full">
     <img src="/capture.png" class="cursor-pointer screenshot" title="Take a snapshot" alt="screenshot" @click="snapshot">
     <model-stl
     ref="model"
