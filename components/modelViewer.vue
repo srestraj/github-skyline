@@ -13,6 +13,7 @@
     }"
     :src="'/models/' + year + '.stl'"
     :glOptions="{ preserveDrawingBuffer: true }"
+     @on-load="rotateModel"
     />
     <img v-if="base64" class="snapshot h-32 md:h-40 w-32 md:w-40" :src="base64" />
   </div>
@@ -52,7 +53,7 @@ export default {
             rotation: {
                 x: -Math.PI / 2,
                 y: 0,
-                z: 0
+                z: Math.PI / 4
             },
             base64: null
         }
@@ -60,6 +61,10 @@ export default {
     methods: {
         snapshot () {
             this.base64 = this.$refs.model.renderer.domElement.toDataURL('image/png', 1)
+        },
+        rotateModel () {
+            this.rotation.z += 0.001
+            requestAnimationFrame(this.rotateModel)
         }
     }
 }
