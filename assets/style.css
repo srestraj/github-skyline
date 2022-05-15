@@ -19,6 +19,7 @@
     bottom: 20px;
     border-radius: 8px;
     border: 1px solid #333;
+    left: 5px;
 }
 @media (max-width: 767px) {
     canvas {
